@@ -50,7 +50,7 @@
       border: 1px solid #ddd;
       padding: 20px;
       font-size: 18px;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s;
     }
@@ -79,7 +79,6 @@
 
   <div class="calculator">
     <form name="calcForm">
-
       <input type="text" name="display" id="display" disabled />
 
       <div class="buttons">
