@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+      margin: 0;
+    }
+
+    .calculator {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 270px;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 90%;
+      height: 40px;
+      font-size: 24px;
+      text-align: right;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0px;
+    }
+
+    button {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      padding: 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e0e0e0;
+    }
+
+    button:active {
+      background-color: #ccc;
+    }
+
+    .equal {
+      grid-column: span 2;
+    }
+
+    .clear {
+      grid-column: span 2;
+      background-color: #ff7070;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator">
+    <form name="calcForm">
+
+      <input type="text" name="display" id="display" disabled />
+
+      <div class="buttons">
+        <button type="button" onclick="calcForm.display.value = '';">C</button>
+        <button type="button" onclick="calcForm.display.value += '7';">7</button>
+        <button type="button" onclick="calcForm.display.value += '8';">8</button>
+        <button type="button" onclick="calcForm.display.value += '9';">9</button>
+        <button type="button" onclick="calcForm.display.value += '/';">/</button>
+
+        <button type="button" onclick="calcForm.display.value += '4';">4</button>
+        <button type="button" onclick="calcForm.display.value += '5';">5</button>
+        <button type="button" onclick="calcForm.display.value += '6';">6</button>
+        <button type="button" onclick="calcForm.display.value += '*';">*</button>
+
+        <button type="button" onclick="calcForm.display.value += '1';">1</button>
+        <button type="button" onclick="calcForm.display.value += '2';">2</button>
+        <button type="button" onclick="calcForm.display.value += '3';">3</button>
+        <button type="button" onclick="calcForm.display.value += '-';">-</button>
+
+        <button type="button" onclick="calcForm.display.value += '0';">0</button>
+        <button type="button" onclick="calcForm.display.value += '.';">.</button>
+        <button type="button" onclick="calcForm.display.value = eval(calcForm.display.value);">=</button>
+        <button type="button" onclick="calcForm.display.value += '+';">+</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
